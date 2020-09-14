@@ -4,14 +4,16 @@ import Button from "../../UI/Button/Button";
 
 class OrderSummary extends Component {
   render() {
-    const ingredientSummary = Object.keys(this.props.ingredients).map((igkey) => {
-      return (
-        <li key={igkey}>
-          <span style={{ textTransform: "capitalize" }}>{igkey}</span>:{" "}
-          {this.props.ingredients[igkey]}
-        </li>
-      );
-    });
+    const ingredientSummary = Object.keys(this.props.ingredients).map(
+      (igkey) => {
+        return (
+          <li key={igkey}>
+            <span style={{ textTransform: "capitalize" }}>{igkey}</span>:{" "}
+            {this.props.ingredients[igkey]}
+          </li>
+        );
+      }
+    );
     return (
       <Aux>
         <h3>Your Order</h3>
