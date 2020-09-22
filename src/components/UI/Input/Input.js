@@ -9,9 +9,11 @@ const input = (props) => {
   if (props.invalid && props.shouldValidate && props.touched) {
     inputClasses.push(classes.Invalid);
     validationError = (
-      <p className={classes.validationError}>
-        Please enter a valid {props.valueType} !!
-      </p>
+      <div>
+        {/* <p className={classes.validationError}>
+           Please enter a valid {props.valueType} !!
+        </p> */}
+      </div>
     );
   }
   switch (props.elementType) {

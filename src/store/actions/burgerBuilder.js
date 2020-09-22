@@ -29,7 +29,6 @@ export const initIngredients = () => {
     axios
       .get("https://burgerreact-6928e.firebaseio.com/ingredients.json")
       .then((response) => {
-        console.log(response.data);
         dispatch(setIngredients(response.data));
       })
       .catch((error) => {
